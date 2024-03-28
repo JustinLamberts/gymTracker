@@ -13,6 +13,9 @@
 <h1>Dit is geen test meer</h1>
 <table>
     <tr>
+        <th>exercise</th>
+        <th>rep</th>
+        <th>weight</th>
         <th>MachineID</th>
         <th>MachineName</th>
         <th>MachineExercises</th>
@@ -21,6 +24,9 @@
         <td th:text="${machine.getMachinid()}"></td>
         <td th:text="${machine.getNaam()}"></td>
         <td th:text="${machine.getVerschillendeOefeningen()}"></td>
+    </tr>
+    <tr th:each="exercise : ${allExercises}">
+        <td th:text="${Exercise.getNaam()}"></td>
     </tr>
 </table>
 </body>
