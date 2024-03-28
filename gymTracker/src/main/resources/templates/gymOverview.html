@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dit is geen test meer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>Dit is geen test meer</h1>
+<table>
+    <tr>
+        <th>MachineID</th>
+        <th>MachineName</th>
+        <th>MachineExercises</th>
+    </tr>
+    <tr th:each="machine : ${allMachines}">
+        <td th:text="${machine.getMachinid()}"></td>
+        <td th:text="${machine.getNaam()}"></td>
+        <td th:text="${machine.getVerschillendeOefeningen()}"></td>
+    </tr>
+</table>
+</body>
+</html>
